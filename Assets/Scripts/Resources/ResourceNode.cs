@@ -3,7 +3,7 @@ using UnityEngine;
 public class ResourceNode : MonoBehaviour
 {
     [Header("Resource Settings")]
-    [SerializeField] private string resourceName = "Wood";
+    [SerializeField] private ItemData itemData;
     [SerializeField] private int resourceAmount = 5;
 
     [Header("Interaction")]
@@ -26,9 +26,13 @@ public class ResourceNode : MonoBehaviour
         if (player == null)
             return;
 
-        float distance = Vector2.Distance(transform.position, player.position);
+        float distance = Vector2.Distance(
+            transform.position,
+            player.position
+        );
 
-        if (distance <= interactionRange && Input.GetKeyDown(KeyCode.E))
+        if (distance <= interactionRange &&
+            Input.GetKeyDown(KeyCode.E))
         {
             Gather();
         }
@@ -36,7 +40,7 @@ public class ResourceNode : MonoBehaviour
 
     private void Gather()
     {
-        if (resourceAmount <= 0)
+        if (resourceAmount <= 0 || itemData == null)
             return;
 
         resourceAmount--;
@@ -45,7 +49,7 @@ public class ResourceNode : MonoBehaviour
 
         if (inventory != null)
         {
-            inventory.AddItem(resourceName, 1);
+            inventory.AddItem(itemData, 1);
         }
 
         if (resourceAmount <= 0)

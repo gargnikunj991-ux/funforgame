@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17723554ba2f0646a305ae7a9f63388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
-  resourceName: Stonr
+  itemData: {fileID: 11400000, guid: 8d550143b953e214ba07577bbb7a4fb6, type: 2}
   resourceAmount: 8
   interactionRange: 2
 --- !u!61 &7797304359215948263

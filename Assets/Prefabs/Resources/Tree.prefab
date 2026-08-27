@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b17723554ba2f0646a305ae7a9f63388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceNode
-  resourceName: Wood
+  itemData: {fileID: 11400000, guid: b3e5ed762f4729b42aa9cb1047377a54, type: 2}
   resourceAmount: 5
   interactionRange: 2
 --- !u!61 &7797304359215948263
